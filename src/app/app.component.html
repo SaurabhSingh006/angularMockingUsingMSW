@@ -1,0 +1,25 @@
+<!-- {{ data | json }} -->
+<button (click)="handleGetAllUser()">Get all users</button>
+<br><br>
+Output: 
+<span>{{ getAllUserData | json }}</span>
+<hr>
+Add new users
+<br>
+<div class="form-field">
+  <label>Username</label>
+  <input [value]="usernameInput" (input)="handleUserInput($event)" type="text">
+</div>
+<br>
+<button (click)="handleAddUser()">Add users</button>
+<hr>
+Delete user by id 
+<br>
+<div class="form-field">
+  <label>Id: </label>
+  <input [value]="deleteId" (input)="handleDeleteIdInput($event)" type="number">
+  {{ deleteId }}
+</div>
+<br>
+<button (click)="handleDeleteUser()">Delete user</button>
+<hr>
